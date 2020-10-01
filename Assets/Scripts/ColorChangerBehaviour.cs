@@ -5,8 +5,8 @@ using UnityEngine;
 public class ColorChangerBehaviour : InteractibleObject
 {
 
-    [SerializeField] private PlayerController playerController;
     [SerializeField] private int colorToSwitchTo;
+    
 
     public override void ActionOnInteraction()
     {
