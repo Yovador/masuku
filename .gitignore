@@ -20,7 +20,8 @@ ExportedObj/
 *.pidb.meta
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+*.lock
+
 # Builds
 *.apk
-*.unitypackage
-.DS_Store
+*.unitypackage.DS_Store
