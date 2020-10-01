@@ -6,14 +6,14 @@ public class LeverBehaviour : InteractibleObject
 {
 
     [SerializeField] private GameObject objectToControl;
-    [SerializeField] private PlayerController player;
 
     public override void ActionOnInteraction()
     {
 
-        if (Input.GetButtonDown("Use") && player.GetcharacterColor() == 0)
+        if (Input.GetButtonDown("Use") && playerController.GetcharacterColor() == 0)
         {
             objectToControl.SetActive(!objectToControl.activeSelf);
+            Destroy(gameObject);
         }
     }
 }

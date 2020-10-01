@@ -5,6 +5,13 @@ using UnityEngine;
 public class InteractibleObject : MonoBehaviour
 {
     protected bool isPlayerInReach;
+    protected PlayerController playerController;
+
+
+    private void Start()
+    {
+        playerController = (PlayerController)GameObject.FindGameObjectWithTag("Player").GetComponent("PlayerController");
+    }
 
     private void Update()
     {

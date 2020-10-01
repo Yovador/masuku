@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float turnSmoothTime;
     private float turnSmoothVelocity;
-    [SerializeField] private Transform cameraTransform;
+    private Transform cameraTransform;
     [SerializeField] private float gravity ;
     [SerializeField] private float airFriction;
     [SerializeField] private float groundFriction;
@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
+        cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
 
         listOfSkin.Add(useSkin);
         listOfSkin.Add(jumpSkin);
