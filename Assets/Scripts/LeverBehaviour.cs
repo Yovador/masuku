@@ -5,7 +5,7 @@ using UnityEngine;
 public class LeverBehaviour : InteractibleObject
 {
 
-    [SerializeField] private GameObject objectToControl;
+    [SerializeField] protected GameObject objectToControl;
 
     public override void ActionOnInteraction()
     {
