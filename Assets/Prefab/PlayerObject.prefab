@@ -174,10 +174,10 @@ CharacterController:
   m_Height: 4
   m_Radius: 0.9
   m_SlopeLimit: 45
-  m_StepOffset: 0.2
+  m_StepOffset: 0.4
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 2.05, z: 0}
 --- !u!114 &83988794411305841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,11 +196,11 @@ MonoBehaviour:
   airFriction: 0.5
   groundFriction: 0.9
   groundCheck: {fileID: 83988795582132130}
-  groundRadius: 0.3
+  groundRadius: 0.5
   groundMask:
     serializedVersion: 2
     m_Bits: 256
-  jumpHeight: 2
+  jumpHeight: 1.5
   useSkin: {fileID: 2282895631007146780}
   jumpSkin: {fileID: 8850462993598126766}
 --- !u!1 &83988794439238445
@@ -259,7 +259,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83988794587536150}
-  m_LocalRotation: {x: 0.20713462, y: -0.002276288, z: 0.0004819517, w: 0.97830975}
+  m_LocalRotation: {x: 0.2071346, y: -0.0022759237, z: 0.0004818745, w: 0.97830975}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -458,7 +458,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83988795229101010}
-  m_LocalRotation: {x: 0.24253562, y: 6.9993526e-15, z: -1.7498379e-15, w: 0.97014254}
+  m_LocalRotation: {x: 0.24253565, y: -0.000000028912497, z: 0.0000000072281248, w: 0.97014254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -851,7 +851,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83988796153161902}
-  m_LocalRotation: {x: 0.2248491, y: -0, z: -0, w: 0.9743936}
+  m_LocalRotation: {x: 0.22484909, y: -0, z: -0, w: 0.9743936}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
