@@ -4,7 +4,7 @@
 o 
 
 # material
-mtllib Perso.mtl
+mtllib perso jaune.mtl
 usemtl palette
 
 # normals
