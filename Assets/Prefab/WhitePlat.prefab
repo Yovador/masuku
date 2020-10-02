@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8020021001188684762}
   - component: {fileID: 8020021001188684763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 8020021001657246685}
   - component: {fileID: 8020021001657246684}
   - component: {fileID: 8020021001657246683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WhitePlat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01fa37e292268174aa6acc71831a38b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
   colorToSwitchTo: 0
 --- !u!1001 &8020021001160806475
 PrefabInstance:
@@ -176,6 +175,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: White puddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4646da8b23f5a3c429e34392ecdbea38,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 4646da8b23f5a3c429e34392ecdbea38,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4646da8b23f5a3c429e34392ecdbea38, type: 3}
