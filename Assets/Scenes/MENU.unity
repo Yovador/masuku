@@ -365,8 +365,9 @@ GameObject:
   - component: {fileID: 744852326}
   - component: {fileID: 744852325}
   - component: {fileID: 744852324}
+  - component: {fileID: 744852327}
   m_Layer: 5
-  m_Name: QUIT
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -434,7 +435,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 744852325}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 744852327}
+        m_MethodName: quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &744852325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,6 +484,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744852322}
   m_CullTransparentMesh: 0
+--- !u!114 &744852327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744852322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4f413e5f5e2794bafd9b67c99e3a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &766820989
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +819,7 @@ GameObject:
   - component: {fileID: 1059454251}
   - component: {fileID: 1059454253}
   - component: {fileID: 1059454252}
+  - component: {fileID: 1059454254}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -853,7 +878,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: QUIT
 --- !u!222 &1059454253
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -862,6 +887,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059454250}
   m_CullTransparentMesh: 0
+--- !u!114 &1059454254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059454250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4f413e5f5e2794bafd9b67c99e3a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1550180065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,7 +1060,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: PLAY
 --- !u!222 &1703981820
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1044,8 +1081,9 @@ GameObject:
   - component: {fileID: 1935464415}
   - component: {fileID: 1935464414}
   - component: {fileID: 1935464413}
+  - component: {fileID: 1935464416}
   m_Layer: 5
-  m_Name: PLAY
+  m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1151,3 +1189,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935464411}
   m_CullTransparentMesh: 0
+--- !u!114 &1935464416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935464411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5355ad92a651f214aa71456ed4dcdcaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelToLoad: MainScene
