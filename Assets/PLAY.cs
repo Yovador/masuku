@@ -7,7 +7,7 @@ public class PLAY : MonoBehaviour
 {
     public string LevelToLoad;
 
-    void LoadLevel()
+    public void LoadLevel()
     {
         SceneManager.LoadScene(LevelToLoad);
     }
