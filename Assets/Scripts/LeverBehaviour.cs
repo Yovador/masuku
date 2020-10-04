@@ -14,6 +14,7 @@ public class LeverBehaviour : InteractibleObject
         {
             objectToControl.SetActive(!objectToControl.activeSelf);
             Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(sound, transform.position);
         }
     }
 }

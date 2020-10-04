@@ -7,7 +7,9 @@ public class InteractibleObject : MonoBehaviour
 {
     protected bool isPlayerInReach;
     protected PlayerController playerController;
-   
+    public AudioSource audioSource;
+    public AudioClip sound;
+
 
 
     private void Start()
@@ -42,6 +44,7 @@ public class InteractibleObject : MonoBehaviour
     public virtual void ActionOnInteraction()
     {
         Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(sound, transform.position);
     }
 
 

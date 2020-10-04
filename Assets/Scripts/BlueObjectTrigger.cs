@@ -8,5 +8,6 @@ public class BlueObjectTrigger : LeverBehaviour
     {
         objectToControl.SetActive(!objectToControl.activeSelf);
         Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(sound, transform.position);
     }
 }
