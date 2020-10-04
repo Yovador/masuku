@@ -125,6 +125,10 @@ public class PlayerController : MonoBehaviour
 
     public void SetcharacterColor(int newColor)
     {
+        if (characterColor != newColor)
+        {
+            
+        }
         characterColor = newColor;
         SwitchColor(newColor);
     }
