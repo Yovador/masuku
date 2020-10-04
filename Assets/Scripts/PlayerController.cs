@@ -24,7 +24,8 @@ public class PlayerController : MonoBehaviour
     private int characterColor = 0; //0 = Color for Use ; 1 = Color for Jump
 
 
-
+    public AudioSource audioSource;
+    public AudioClip sound;
 
     private void Start()
     {
@@ -127,7 +128,7 @@ public class PlayerController : MonoBehaviour
     {
         if (characterColor != newColor)
         {
-            
+            AudioSource.PlayClipAtPoint(sound, transform.position);
         }
         characterColor = newColor;
         SwitchColor(newColor);

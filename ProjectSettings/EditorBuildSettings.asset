@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Enigme3Proto.unity
     guid: c3e05cb41be9d674fa049e659d62f92c
   - enabled: 1
