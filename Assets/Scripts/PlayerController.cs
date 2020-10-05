@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject useSkin;
     [SerializeField] private GameObject jumpSkin;
     private List<GameObject> listOfSkin = new List<GameObject>();
+    private bool canJump = false;
 
     private int characterColor = 0; //0 = Color for Use ; 1 = Color for Jump
 
@@ -70,7 +71,10 @@ public class PlayerController : MonoBehaviour
             Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             return moveDirection.normalized * moveSpeed * Time.deltaTime;
         }
-        else return Vector3.zero;
+        else
+        {
+            return Vector3.zero;
+        }
     }
 
     private bool CheckGround()
@@ -98,6 +102,7 @@ public class PlayerController : MonoBehaviour
         {
             actualVelocity.y = -2f;
         }
+
 
         return actualVelocity * Time.deltaTime;
 
@@ -142,13 +147,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider trigger)
     {
-        Debug.Log("Triggered !");
         if (trigger.gameObject.tag == "Water")
         {
-            Debug.Log("In If !");
             ChangePosition(resetCoord);
-
-
         }
     }
 

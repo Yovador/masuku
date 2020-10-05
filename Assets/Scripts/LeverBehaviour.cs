@@ -7,6 +7,7 @@ public class LeverBehaviour : InteractibleObject
 
     [SerializeField] protected GameObject objectToControl;
 
+
     public override void ActionOnInteraction()
     {
 
@@ -14,7 +15,6 @@ public class LeverBehaviour : InteractibleObject
         {
             objectToControl.SetActive(!objectToControl.activeSelf);
             Destroy(gameObject);
-
             AudioSource.PlayClipAtPoint(sound, transform.position);
         }
     }
