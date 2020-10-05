@@ -7,14 +7,22 @@ public class InteractibleObject : MonoBehaviour
 {
     protected bool isPlayerInReach;
     protected PlayerController playerController;
-    public AudioSource audioSource;
-    public AudioClip sound;
+    private AudioSource audioSource;
+    [SerializeField] protected AudioClip sound;
+    private AudioManager audioManager;
 
 
 
     private void Start()
     {
+
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+        audioSource = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioSource>();
         playerController = (PlayerController)GameObject.FindGameObjectWithTag("Player").GetComponent("PlayerController");
+        if (sound == null)
+        {
+            sound = audioManager.GetDefaultSound();
+        }
     }
 
     private void Update()

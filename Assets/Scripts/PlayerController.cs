@@ -23,12 +23,21 @@ public class PlayerController : MonoBehaviour
 
     private int characterColor = 0; //0 = Color for Use ; 1 = Color for Jump
 
+    [SerializeField] private Vector3 resetCoord;
 
-    public AudioSource audioSource;
-    public AudioClip sound;
+    private AudioSource audioSource;
+    private AudioManager audioManager;
+    [SerializeField] private AudioClip sound;
 
     private void Start()
     {
+
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+        audioSource = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioSource>();
+        if (sound == null)
+        {
+            sound = audioManager.GetDefaultSound();
+        }
         characterController = GetComponent<CharacterController>();
         cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
 
@@ -121,6 +130,25 @@ public class PlayerController : MonoBehaviour
             {
                 listOfSkin[i].SetActive(false);
             }
+        }
+    }
+
+    private void ChangePosition(Vector3 newPos)
+    {
+        characterController.enabled = false;
+        gameObject.transform.position = newPos;
+        characterController.enabled = true;
+    }
+
+    private void OnTriggerEnter(Collider trigger)
+    {
+        Debug.Log("Triggered !");
+        if (trigger.gameObject.tag == "Water")
+        {
+            Debug.Log("In If !");
+            ChangePosition(resetCoord);
+
+
         }
     }
 

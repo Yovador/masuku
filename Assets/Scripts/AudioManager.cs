@@ -4,9 +4,10 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 
 {
-    public AudioClip[] playlist;
-    public AudioSource audioSource;
+    [SerializeField] private AudioClip[] playlist;
+    [SerializeField] private AudioSource audioSource;
     private int musicIndex = 0;
+    [SerializeField] private AudioClip defaultSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +30,10 @@ public class AudioManager : MonoBehaviour
         musicIndex = (musicIndex + 1) % playlist.Length;
         audioSource.clip = playlist[musicIndex];
         audioSource.Play();
+    }
+
+    public AudioClip GetDefaultSound()
+    {
+        return defaultSound;
     }
 }
