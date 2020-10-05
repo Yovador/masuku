@@ -5,7 +5,17 @@ using UnityEngine;
 
 public class PLAY : MonoBehaviour
 {
-    public string LevelToLoad;
+    [SerializeField] private string LevelToLoad; 
+    [SerializeField] private bool creditCharger = false;
+
+    private void Awake()
+    {
+        if (creditCharger)
+        {
+            SceneManager.LoadScene(LevelToLoad);
+        }
+    }
+
 
     public void LoadLevel()
     {
