@@ -14,8 +14,8 @@ public class LeverBehaviour : InteractibleObject
         if (Input.GetButtonDown("Use") && playerController.GetcharacterColor() == 0)
         {
             objectToControl.SetActive(!objectToControl.activeSelf);
-            Destroy(gameObject);
             AudioSource.PlayClipAtPoint(sound, transform.position);
+            Destroy(gameObject);
         }
     }
 }

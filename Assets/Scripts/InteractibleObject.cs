@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class InteractibleObject : MonoBehaviour
 {
+
     protected bool isPlayerInReach;
     protected PlayerController playerController;
     private AudioSource audioSource;
